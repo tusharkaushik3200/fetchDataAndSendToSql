@@ -8,7 +8,7 @@ var path = require('path');
 app.use(bodyParser({ limit: '50mb' }));
 // let readFile = fs.readFileSync('./outputPhysics11th.json' ,'utf-8'); //READ FILE 
 
-
+https://https://github.com/tusharkaushik3200/sendApi://github.com/tusharkaushik3200/sendApiub.com/tusharkaushik3200/sendApi
 //MYSQL DATABASE CONNECTION//
 
 var con = mysql.createConnection({
