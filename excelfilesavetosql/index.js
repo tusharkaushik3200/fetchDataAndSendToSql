@@ -6,9 +6,9 @@ let bodyParser = require('body-parser');
 var path = require('path');
 
 app.use(bodyParser({ limit: '50mb' }));
+
 // let readFile = fs.readFileSync('./outputPhysics11th.json' ,'utf-8'); //READ FILE 
 
-https://https://github.com/tusharkaushik3200/sendApi://github.com/tusharkaushik3200/sendApiub.com/tusharkaushik3200/sendApi
 //MYSQL DATABASE CONNECTION//
 
 var con = mysql.createConnection({
@@ -37,7 +37,6 @@ app.post('/data', (req, res) => {
   let stdData = req.body.studentData;
   let valu = [];
 
-  
   stdData.forEach(element => {
     // console.log(element)
     valu.push(Object.values(element));
@@ -65,9 +64,21 @@ app.post('/data', (req, res) => {
 // TO SEND DATA TO OTHER URL //
 
 
-// app.get('/', (req, res) => {
-//    res.send(req.body)
-// });
+app.get('/list', (req, res) => {
+     
+  let list = connection.query('SELECT * FROM userdata',function(err,rows)     {
+ 
+    if(err){
+     console.log(err); 
+     const obj = {'err' : err}
+     res.send(obj);
+    }else{
+        
+        res.send(list);
+    }
+                        
+     });
+});
 
 
 
